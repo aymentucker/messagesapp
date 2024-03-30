@@ -392,6 +392,18 @@ To work around this, make sure to generate goldens and run golden tests on a sin
 ## License
 Flutter Template is licensed under the MIT license. Check the [LICENSE](LICENSE) file for details.
 
+## Creators
+
+**Ismael Ramos**
+
+- <https://github.com/ismaestro>
+
+<a href='https://ko-fi.com/S6S5LMVR' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+## Thanks
+
+Thanks to all contributors and their support:
+
 ## Other Versions
 ##### Check out the [multi-package branch](https://github.com/wednesday-solutions/flutter_template/tree/multi-package) for a multi package flutter architecture.
 
