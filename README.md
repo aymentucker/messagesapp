@@ -3,7 +3,7 @@
 <img align="left" src="https://designercastle.com/wp-content/uploads/2023/08/aymen-ali-icon.png" width="480" height="440" />
 
 <div>
-  <a href="https://www.wednesday.is?utm_source=gthb&utm_medium=repo&utm_campaign=serverless" align="left"><img src="https://uploads-ssl.webflow.com/5ee36ce1473112550f1e1739/5f5879492fafecdb3e5b0e75_wednesday_logo.svg"></a>
+  <a href="https://designercastle.com" align="left"><img src="https://designercastle.com/wp-content/uploads/2023/08/aymen-ali-icon.png"></a>
   <p>
     <h1 align="left">Message App</h1>
   </p>
@@ -21,17 +21,17 @@
   </p>
 
   <div>
-    <a href="https://www.wednesday.is/contact-us?utm_source=gthb&utm_medium=repo&utm_campaign=serverless" target="_blank">
+    <a href="https://designercastle.com" target="_blank">
       <img src="https://uploads-ssl.webflow.com/5ee36ce1473112550f1e1739/5f6ae88b9005f9ed382fb2a5_button_get_in_touch.svg" width="121" height="34">
     </a>
-    <a href="https://github.com/wednesday-solutions/" target="_blank">
+    <a href="https://github.com/aymentucker/" target="_blank">
       <img src="https://uploads-ssl.webflow.com/5ee36ce1473112550f1e1739/5f6ae88bb1958c3253756c39_button_follow_on_github.svg" width="168" height="34">
     </a>
   </div>
 
   ___
 
-<span>We’re always looking for people who value their work, so come and join us. <a href="https://www.wednesday.is/hiring">We are hiring!</a></span>
+<span>We’re always looking for people who value their work, so come and join us. <a href="https://designercastle.com">We are hiring!</a></span>
 </div>
 
 ![CI](https://github.com/wednesday-solutions/flutter_template/actions/workflows/ci.yml/badge.svg)
@@ -61,23 +61,10 @@ If not run this command to update flutter to the latest version
 ```bash
 flutter upgrade
 ```
-
-#### Derry
-This template uses [`derry`](https://pub.dev/packages/derry) as it's script manager.
-Run this command to setup derry
-```bash
-dart pub global activate derry
-```
-Most of the scripts we will use are abstracted away by derry. If you want to know more about the scirpts, read the [scripts documentation](scripts/README.md).
 #### Get Dependencies
 ```shell
 flutter pub get
 ```
-#### Run Code Generation
-```shell
-derry generate all
-```
-
 #### API Key
 
 > #####  You can skip this step if you just want to get the template running. If you skip this step, the weather search will not give you any results.
