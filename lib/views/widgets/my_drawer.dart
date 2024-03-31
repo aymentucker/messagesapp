@@ -1,16 +1,34 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:messagesapp/services/auth_service.dart';
+import 'package:provider/provider.dart';
 
 import 'my_drawer_tile.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
 
-  void _logout(BuildContext context) async {
-    await FirebaseAuth.instance.signOut();
-    // After logging out, navigate the user to the login screen or another appropriate screen
-    Navigator.of(context)
-        .pushReplacementNamed('/login'); // Adjust the route name as needed
+  // void _logout(BuildContext context) async {
+  //   await FirebaseAuth.instance.signOut();
+  //   // After logging out, navigate the user to the login screen or another appropriate screen
+  //   Navigator.of(context)
+  //       .pushReplacementNamed('/login'); // Adjust the route name as needed
+  // }
+
+  void SignOut(BuildContext context) async {
+    //get auth service
+
+    final authservice = Provider.of<AuthService>(context, listen: false);
+    try {
+      // Attempt to sign in the user with Firebase Auth
+      await authservice.signOut();
+    } on FirebaseAuthException catch (e) {
+      // If there's an error, display a message to the user
+      print(e
+          .message); // Consider using something like Fluttertoast for user feedback
+      Fluttertoast.showToast(msg: e.message ?? "An error occurred");
+    }
   }
 
   @override
@@ -59,7 +77,7 @@ class MyDrawer extends StatelessWidget {
           MyDrawerTile(
             text: 'L O G O U T',
             icon: Icons.logout,
-            onTap: () => _logout(context),
+            onTap: () => SignOut(context),
           ),
           const SizedBox(
             height: 25,
