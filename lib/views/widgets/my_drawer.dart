@@ -1,20 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:messagesapp/services/auth/auth_service.dart';
+import 'package:messagesapp/providers/auth/auth_provider.dart';
 import 'package:provider/provider.dart';
 
 import 'my_drawer_tile.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
-
-  // void _logout(BuildContext context) async {
-  //   await FirebaseAuth.instance.signOut();
-  //   // After logging out, navigate the user to the login screen or another appropriate screen
-  //   Navigator.of(context)
-  //       .pushReplacementNamed('/login'); // Adjust the route name as needed
-  // }
 
   void SignOut(BuildContext context) async {
     //get auth service
@@ -41,10 +34,9 @@ class MyDrawer extends StatelessWidget {
           // app logo
           Padding(
             padding: const EdgeInsets.only(top: 100.0),
-            child: Icon(
-              Icons.lock_open_rounded,
-              size: 80,
-              color: Theme.of(context).colorScheme.primary,
+            child: Image.asset(
+              'assets/images/logo.png',
+              height: 100,
             ),
           ),
           const SizedBox(

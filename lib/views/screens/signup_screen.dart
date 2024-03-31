@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:messagesapp/services/auth/auth_service.dart';
+import 'package:messagesapp/providers/auth/auth_provider.dart';
 import 'package:provider/provider.dart';
 import '../widgets/my_button.dart';
 import '../widgets/my_textfield.dart';
@@ -67,9 +67,9 @@ class _SignupScreenState extends State<SignupScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Logo
-            const Icon(
-              Icons.lock_open_outlined,
-              size: 100,
+            Image.asset(
+              'assets/images/logo.png',
+              height: 100,
             ),
             const SizedBox(
               height: 25,
