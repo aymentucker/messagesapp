@@ -43,7 +43,7 @@ class _ChatScreenState extends State<ChatScreen> {
           Expanded(child: _buildMessageList()),
           // userInput
           _buildMessageInput(),
-          SizedBox(
+          const SizedBox(
             height: 25,
           )
         ],
@@ -98,7 +98,7 @@ class _ChatScreenState extends State<ChatScreen> {
               : MainAxisAlignment.start,
           children: [
             Text(data['senderEmail']),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             ChatBubble(data['message']),

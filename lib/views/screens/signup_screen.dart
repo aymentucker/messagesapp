@@ -22,9 +22,6 @@ class _SignupScreenState extends State<SignupScreen> {
 
   TextEditingController confirmedPasswordController = TextEditingController();
 
-  // Firebase Auth instance
-  final _auth = FirebaseAuth.instance;
-
   //signup
 
   void signUp() async {
@@ -54,41 +51,12 @@ class _SignupScreenState extends State<SignupScreen> {
     }
   }
 
-  // void _signUp() async {
-  //   try {
-  //     if (passwordController.text == confirmedPasswordController.text) {
-  //       final newUser = await _auth.createUserWithEmailAndPassword(
-  //         email: emailController.text,
-  //         password: passwordController.text,
-  //       );
-  //       if (newUser.user != null) {
-  //         // User created successfully, navigate to your next screen
-  //         Navigator.of(context).pushReplacementNamed('/home');
-  //       }
-  //     } else {
-  //       // Show toast message when passwords do not match
-  //       Fluttertoast.showToast(
-  //           msg: "Passwords do not match",
-  //           toastLength: Toast.LENGTH_SHORT,
-  //           gravity: ToastGravity.BOTTOM,
-  //           timeInSecForIosWeb: 1,
-  //           backgroundColor: Colors.red,
-  //           textColor: Colors.white,
-  //           fontSize: 16.0);
-  //     }
-  //   } catch (e) {
-  //     // Handle errors, possibly show an alert to the user
-  //     print(e);
-  //     Fluttertoast.showToast(
-  //         msg: e.toString(),
-  //         toastLength: Toast.LENGTH_SHORT,
-  //         gravity: ToastGravity.BOTTOM,
-  //         timeInSecForIosWeb: 1,
-  //         backgroundColor: Colors.red,
-  //         textColor: Colors.white,
-  //         fontSize: 16.0);
-  //   }
-  // }
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
