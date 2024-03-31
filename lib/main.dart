@@ -1,9 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:messagesapp/auth/auth_gate.dart';
+import 'package:messagesapp/services/auth/auth_gate.dart';
 import 'package:messagesapp/firebase_options.dart';
 import 'package:messagesapp/providers/theme_provider.dart';
-import 'package:messagesapp/services/auth_service.dart';
+import 'package:messagesapp/services/auth/auth_service.dart';
+import 'package:messagesapp/services/chat/chat_service.dart';
 import 'package:messagesapp/services/shared_prefs_manager.dart';
 import 'package:provider/provider.dart';
 import 'package:messagesapp/utils/routes/route_page_builder.dart';
@@ -22,6 +23,7 @@ void main() async {
     providers: [
       ChangeNotifierProvider(create: (context) => ThemeProvider()),
       ChangeNotifierProvider(create: (context) => AuthService()),
+      ChangeNotifierProvider(create: (context) => ChatService()),
     ],
     child: const MyApp(),
   ));
